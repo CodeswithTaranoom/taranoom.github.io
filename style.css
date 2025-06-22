@@ -1,39 +1,71 @@
+/* Body Styling */
 body {
     background-color: #f0f8ff;
     color: #333;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin-top: 50px;
 }
 
+/* Heading Animation */
 h1 {
     color: #1e90ff;
     font-size: 48px;
     animation: move 2s infinite;
 }
 
-p {
-    font-size: 24px;
-    color: #555;
+/* Typewriter Effect */
+.typewriter h2 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 20px auto;
+    letter-spacing: .10em;
+    animation: typing 4s steps(30, end) 1, blink-caret 0.75s step-end infinite;
+    font-size: 28px;
 }
 
+/* Image Styling */
+img {
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Button Styling */
 button {
     background-color: #1e90ff;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
+/* Button Hover Animation */
 button:hover {
-    background-color: #555;
+    background-color: #ff4500;
+    transform: scale(1.1);
 }
 
+/* Heading Move Animation */
 @keyframes move {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
 
+/* Typewriter Typing Animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Typewriter Blinking Cursor Animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
